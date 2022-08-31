@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>RUN AM APP</title>
+   <style>
+     h1{
+      float:center;
+     }
+
+    p{
+      font-style: italic;
+      font-weight: bold;
+      font-color: blue;
+    }
+    
+   </style>
+</head>
+
+<body>
+ 
+	<h1>NEWS SOUCRE VERIFICATION</h1>
+    <p>KINDLY TYPE THE NEWS HEADLINE AND SOUCRE IN THE BOX BELOW</p>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<TEXTAREA name="rawtext"></TEXTAREA>
+
+        <button type="submit">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ final_result }}
+
+ </div>
+
+
+</body>
+</html>
